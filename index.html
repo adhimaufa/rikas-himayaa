@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rikas &#9829; Himaya</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" href="asset/image/favicon.ico" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+</head>
+
+<body onload="toggle(),create_unfinished_task()">
+    <div id="popup">
+        <div class="title">
+            <h3 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="3000">You are Invited to Come!</h3>
+            <h3 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="3000">The Wedding Celebration of</h3>
+            <h4 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="3000">Rikas & Himaya</h4>
+            <a href="#" onclick="toggle(), playing()" data-aos="zoom-in" data-aos-duration="3000"> &#10084; Open Invitation</a>
+        </div>
+    </div>
+    <audio id="song" hidden loop> 
+        <source src="asset/audio/i.mp3" type="audio/mpeg">
+    </audio>
+    <div id="top">
+        <div class="container"> 
+            <div class="content-top">
+                <h2 class="font-bigger" data-aos="fade-down" data-aos-duration="3000">We are Celebrating our Married</h2>
+                <h2 class="font-amalfi" data-aos="fade-left" data-aos-duration="3000">Rikas & Himaya<h2>
+                <h2 data-aos="fade-up" data-aos-duration="3000">21 Maret 2021</h2>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-isra" data-aos="fade-up" data-aos-duration="3000">
+        <img src="asset/image/On Al Isra.png" alt="">
+        <p>“Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu 
+            istri-istri dari jenismu sendiri, supaya kamu cenderung dan merasa
+            tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang.
+            Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda 
+            bagi kaum yang berfikir. ”</p>
+        <h3><b>( Q.S Al Isra: 21 )</b></h3>
+    </div>
+
+    <div class="pengantin" data-aos="zoom-in" data-aos-duration="2500">
+        <img src="asset/image/pengantin.png" alt="">
+    </div>
+
+    <div class="akad-tgl" data-aos="fade-right" data-aos-duration="2500">
+        <span>Akad Nikah</span>
+        <p>telah dilaksanakan 21 Februari 2021</p>
+    </div>
+
+    <div id="bride-groom">
+        <div class="bride" data-aos="fade-right" data-aos-duration="2500">
+            <img src="asset/image/onmita.png" alt="mita">
+            <div class="text-block">
+                <p class="playfair">The Groom:</p>
+                <p class="font-bromello">Rikas</p>
+                <p class="salsa" >Ilyas Rikas Putra S.Ip</p>
+                <p class="space">Putra pertama dari Bpk. H. Ridwan Setiaji & Ibu Hj. Tetti Sumiati</p>
+            </div>
+        </div>
+        <div class="groom" data-aos="fade-up" data-aos-duration="2500">
+            <img src="asset/image/onrizki.png" alt="rizki">
+            <div class="text-block1">
+                <p class="playfair">The Bride:</p>
+                <p class="font-bromello">Himaya</p>
+                <p class="salsa" >Himayatul Faroh S.Ak</p>
+                <p class="space">Putri kedua dari Bpk. Tasrifan & Ibu Titin Inayah</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="counting">
+        <div class="container">
+            <div class="count-down" data-aos="fade-right" data-aos-duration="3000">
+                <p>
+                    Counting down to the big day
+                </p>
+                <div class="time">
+                    <div id="habis"></div>
+                    <div class="times" id="times">
+                        <div id="day"></div>
+                        <div class="font-smaller">day(s)</div>
+                    </div>
+
+                    <div class="separator" id="separator">:</div>
+                    
+                    <div class="times" id="times1">
+                        <div id="hour"></div>
+                        <div class="font-smaller">hour(s)</div>
+                    </div>
+                    
+                    <div class="separator" id="separator1">:</div>
+                    
+                    <div class="times" id="times2">
+                        <div id="minute"></div>
+                        <div class="font-smaller">minute(s)</div>
+                    </div>
+                    
+                    <div class="separator" id="separator2"> :</div>
+                    
+                    <div class="times" id="times3">
+                        <div id="second"></div>
+                        <div class="font-smaller">second(s)</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="date">
+        <div class="save-date" data-aos="fade-up" data-aos-duration="2500">
+            <p>Save The Date</p>
+        </div>
+        <img src="asset/image/onsabtu1.png" alt="mita" data-aos="fade-up" data-aos-duration="3000">
+        <div class="text-block2">
+            <div class="waktu">
+                <div class="resepsi" data-aos="fade-right" data-aos-duration="2500">
+                    <span>Resepsi Ngunduh Mantu</span>
+                    <p>PUKUL 13.00 - 15.00 WIB</p>
+                </div>
+                <!-- <div class="sabtu">
+                    <p> 21</p>
+                    <p>Maret</p>
+                    <p>2021</p>
+                </div>  -->
+                
+            </div>
+            <!-- <div class="kediaman" data-aos="fade-up" data-aos-duration="2500">
+                <p>di Gedung Griya Tritama, Jl. Batu Ampar II, RT 12/3, Batu Ampar, Kramatjati, Jakarta Timur</p>
+            </div> -->
+        </div>
+        <a href="https://goo.gl/maps/GmzVyqehH5B2uuEP8" target="_blank" data-aos="zoom-in" data-aos-duration="3000">Get Direction</a>    
+    </div>
+    
+    <div class="sorry" data-aos="fade-right" data-aos-duration="3000">
+        <!-- <p>Tanpa mengurangi rasa hormat</p>
+        <p>sehubungan dengan situasi pandemi COVID-19</p>
+        <p>kami memohon maaf yang sebesar-besarnya</p> 
+        <p>karena hanya dapat mengundang keluarga dan kerabat terdekat. 
+           Kami mengundang Bapak/Ibu/Saudara/i berkenan untuk turut memberikan
+           do'a restu serta turut ambil bagian dalam momen penyatuan cinta kami
+           yang dapat disaksikan melalui siaran live streaming di tautan berikut.
+        </p> -->
+        <p>"The highest happiness on earth is the happiness of marriage"</p>
+        <!-- <div class="live-stream" data-aos="zoom-in" data-aos-duration="3000">
+            <p>Live Stream</p>
+        </div> 
+        <div class="icon-sosmed" data-aos="zoom-in" data-aos-duration="3000">
+            <a href="https://www.instagram.com/mitatsa03/" target="_blank"><img src="asset/image/ig.png" alt="mita"></a>
+        </div> -->
+    </div>
+        
+    <div class="sorry1" data-aos="fade-up" data-aos-duration="3000">
+        <p>
+            Kami tidak sabar merayakan pernikahan kami bersama kalian
+        </p>
+    </div>
+
+
+    <div class="prokes" data-aos="fade-up" data-aos-duration="3000">
+        <h2>Health Protocols</h2>
+        <div class="pro1" data-aos="fade-up" data-aos-duration="3000">
+            <img src="asset/image/1.png" alt="prokes">
+            <img src="asset/image/2.png" alt="prokes">
+        </div>
+        <div class="pro1" data-aos="fade-up" data-aos-duration="3000">
+            <img src="asset/image/3.png" alt="prokes">
+            <img src="asset/image/4.png" alt="prokes">
+        </div>
+        <div class="pro2" data-aos="fade-up" data-aos-duration="3000">
+            <img src="asset/image/5.png" alt="prokes">
+        </div>
+    </div>
+
+    <div class="hadiah">
+        <div class="ucapan-hadiah" data-aos="fade-up" data-aos-duration="3000">
+            <h1>Kirim Hadiah</h1>
+            <p>Kami mengucapkan terima kasih kepada Bapak/Ibu/Kerabat & Sahabat yang telah berkenan mengirimkan
+            hadiah bagi pernikahan kami. Hadiah dapat dikirimkan melalui:</p> 
+        </div>
+        <div class="detail-hadiah" data-aos="zoom-in" data-aos-duration="3000">
+            <img data-aos="zoom-in" data-aos-duration="3000" src="asset/image/hadiah1.png" alt="himaya">
+            <img data-aos="zoom-in" data-aos-duration="3000" src="asset/image/hadiah2.png" alt="himaya">
+            <!-- <img data-aos="zoom-in" data-aos-duration="3000" src="asset/image/hadiah3.png" alt="himaya"> -->
+        </div>
+    </div>
+
+    <div class="contact-us box" data-aos="fade-up" data-aos-duration="3000">
+        <h2>Wishes For Us</h2>
+        <p>Tinggalkan do'a/pesan/harapan untuk Rikas & Himaya</p>
+        <a href="#newcomment">
+            <button> 💌 Tuliskan Pesan..</button>
+        </a>
+
+        <div class="container1"></div>
+
+        <div class="footer-content">
+            <form id="newcomment">
+                <div class="form-elements">
+                    <input id="name"  type="text" placeholder="Nama anda / Nama anda sekeluarga" required/>
+                    <textarea id="message" rows="2" placeholder="Tuliskan do'a/pesan/harapan anda disini..." required></textarea>
+                    <div class="btn">
+                        <button id="input_button" onclick="add_task()" >Send</button>
+                    </div> 
+                </div>
+            </form>
+        </div>
+        <div class="thankyou">
+            <h2>Thank You</h2>
+            <h5>Rikas & Himaya<h5>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Made with full of &#10084; by .</p>
+        <a href="https://twitter.com/aufadhim" target="_blank">Auf.</a>
+    </div>
+
+    <script src="js/script.js" type="text/javascript"></script>
+</body>
+</html>

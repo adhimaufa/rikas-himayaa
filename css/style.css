@@ -1,0 +1,1344 @@
+/* nama */
+@font-face {
+  font-family: 'amalfi';
+  src: url(../asset/font/Amalfi\ Coast.ttf);
+}
+
+@font-face {
+  font-family: 'christmas';
+  src: url(../asset/font/Christmas\ and\ Santona.ttf);
+}
+
+@font-face {
+  font-family: 'christ';
+  src: url(../asset/font/Christina.otf);
+}
+
+@font-face {
+  font-family: 'shafron';
+  src: url(../asset/font/Shaffron.ttf);
+}
+
+@font-face {
+  font-family: 'bromello';
+  src: url(../asset/font/bromello-Regular.otf);
+}
+
+@font-face {
+  font-family: 'qalistha';
+  src: url(../asset/font/Qalistha.ttf);
+}
+
+/* mongolian baiti kw */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@300&family=Playfair+Display&display=swap');
+/* invited */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+/* open invitation */
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+/* salsa */
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+/* time */
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+*{
+    font-family:'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+    background: url("../asset/image/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/*scroll bar*/
+/* width */
+::-webkit-scrollbar {
+  width: 3px !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px white; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #466089; 
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-track-piece{
+    background: var(--mudaCoklat);   
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #466089; 
+  }
+
+#popup{
+  color: black;
+  position: fixed;
+  top: -100%;
+  width: 100vw;
+  height: 100vh;
+  background: url("../asset/image/cover.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  visibility: hidden;
+  opacity: 1;
+  transition: 1s;
+  z-index: 1;
+}
+
+#popup.active{
+    top: 0%;
+    visibility: visible;
+    opacity: 1;
+    transition: 1s;
+}
+
+.title{
+  padding-top: 50px;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.title h3{
+  color: black;
+  font-family: 'Playfair Display', serif;
+  font-weight: lighter;
+  font-size: 30px;
+}
+
+.title h4{
+  color: black;
+  font-family: 'amalfi';
+  font-size: 50px;
+}
+
+.title a{
+  position: relative;
+  padding: 8px 200px;
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: black;
+  background: rgba(249, 211, 145, 0.55);
+  font-family: 'christmas';
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+title a:hover{
+  background: rgb(238, 238, 238);
+}
+
+img{
+  pointer-events: none;  
+}
+
+.container{
+  position: relative;
+  width: 100%;
+  height: 100%;     
+}
+
+#top{
+    width: 100vw;
+    height: 100vh;
+    background: url("../asset/image/cover1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;    
+}
+
+.content-top{
+  width: 100vw;    
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.content-top h2{
+  font-family: 'Playfair Display', serif;
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+.content-isra{
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px 0 30px 0;
+}
+
+.content-isra img{
+  width: 150px;
+}
+
+.content-isra p{
+  padding: 20px 250px;
+
+}
+
+.content-isra h3 b,
+.content-isra p{
+  color: #466089;
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  line-height: 25px;
+}
+
+.pengantin{
+  width: 100vw;
+  /* height: 100vh; */
+}
+
+.pengantin img{
+  width: 100%;
+  height: 100%;
+}
+
+.akad-tgl{
+  width: 100vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 30px;
+}
+
+.akad-tgl span,
+.akad-tgl p{
+  color: #466089;
+  font-family: 'shafron';
+}
+
+#bride-groom{
+    width: 100vw;
+    height: max-content;
+}
+
+.bride img,
+.groom, img{
+  width: 600px;
+}
+
+.bride{
+  float: left;
+  margin-top: 30px;
+  position: relative;
+  width: 100vw;
+}
+
+.groom{
+  float: right;
+  margin-top: 0px;
+  position: relative;
+  width: 100vw!important;
+  text-align: right;
+}
+
+.text-block{
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  text-align: left;
+}
+
+.text-block1{
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  text-align: right;
+}
+
+.text-block1 p,
+.text-block p{
+  color: black !important;
+  font-family: sans-serif;
+  font-size: 40px;
+}
+
+.space{
+  padding-top: 10px;
+}
+
+.playfair{
+  font-family: 'Playfair Display', serif !important;
+  font-size: 50px !important;
+}
+
+.salsa{
+  font-family: 'Salsa', cursive !important;
+  font-size: 60px !important;
+  font-weight: 545;
+}
+
+.font-bigger{
+  font-size: 20px !important;
+}
+
+.font-amalfi{
+  font-family: 'amalfi' !important;
+  font-size: 22px !important;
+}
+
+.font-bromello{
+  font-family: 'bromello' !important;
+  font-size: 200px !important;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+#counting{
+  width: 100vw;
+  height: max-content;
+}
+
+.count-down{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 30vh;
+}
+
+.count-down p{
+  font-family: 'christ';
+  font-size: 50px;
+  color: #466089;
+  font-weight: lighter;
+}
+
+.time{
+  margin-top: 20px;
+  font-size: 45px;
+  display: flex;
+}
+
+.times{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#day, #hour, #minute, #second{
+  color: #466089;
+  font-family: 'shafron';
+  font-weight: lighter;
+}
+
+.separator{
+  font-family: 'Play', sans-serif !important;
+  color: #466089;
+  padding: 0 100px;
+}
+
+.font-smaller{
+  font-size: 15px;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #466089;
+}
+
+#habis.aktif{
+  visibility: visible;
+  opacity: 1;
+  transition: 1s;
+  color: #466089;
+  font-size: 40px;
+  font-family: 'shafron';
+}
+
+#times.aktif,
+#times1.aktif,
+#times2.aktif,
+#times3.aktif,
+#separator.aktif,
+#separator1.aktif,
+#separator2.aktif{
+  display: none;
+}
+
+
+.date{
+  width: 100vw;
+  height: max-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.date p{
+  color: #466089;
+  font-size: 15px !important;
+  font-weight: bolder;
+}
+
+.date .save-date p{
+  font-family: 'christ' !important;
+  font-size: 50px !important;
+  color: #466089;
+  font-weight: lighter;
+}
+
+.date img{
+  width: 100%;
+  margin-top: 100px;
+}
+
+.text-block2{
+  position: absolute;
+  top: 0;
+  width: 100vw !important;
+}
+
+.waktu{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.waktu .akad,
+.waktu .sabtu,
+.waktu .resepsi{
+  width: 100%;
+}
+
+.waktu .akad{
+  text-align: center;
+}
+
+.waktu .resepsi{
+  margin-top: 60px;
+}
+
+.waktu .resepsi span,
+.waktu .akad span{
+  font-family: 'qalistha';
+  font-size: 40px;
+  color: #466089;
+  font-weight: bolder;
+}
+
+.waktu .resepsi p,
+.waktu .akad p{
+  font-size: 20px !important;
+  padding: 0 !important;
+}
+
+.waktu .resepsi p{
+  text-align: center;
+}
+
+.waktu .sabtu{
+  text-align: center !important;
+  margin-top: 55px;
+}
+
+.waktu .sabtu p{
+  color: black;
+  font-size: 60px !important;
+  padding: 0 !important;
+  line-height: 100px;
+}
+
+.kediaman{
+  text-align: center;
+  padding: 20px 60px;
+  margin-top: 40px;
+}
+
+.kediaman p{
+  padding: 0 300px;
+  margin-top: 100px;
+  font-size: 20px !important;
+  font-family: 'Playfair Display', serif;
+  line-height: 20px;
+}
+
+.date a{
+  text-decoration: none;
+  text-align: center;
+  padding: 0px 20px;
+  color: black;
+  background: rgba(70, 96, 137,.5);
+  border-radius: 20px;
+  font-family: 'christmas';
+  font-size: 30px;
+  margin-top: -60px;
+  margin-bottom: 60px;
+}
+
+.sorry1,
+.sorry{
+  width: 100vw;
+  height: max-content;
+  position: relative;
+}
+
+.sorry p{
+  text-align: center !important;
+  font-weight: lighter !important;
+  font-size: 40px !important;
+  font-family:'Playfair Display', serif;
+  color: #466089;
+  padding: 0 30px;
+  line-height: 40px;
+}
+
+.sorry1 p{
+  text-align: center !important;
+  font-weight: lighter !important;
+  font-size: 30px !important;
+  font-family:'Playfair Display', serif;
+  color: #466089;
+  padding: 50px 30px 50px 30px;
+  line-height: 40px;
+  margin-top: 50px;
+}
+
+.live-stream{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.live-stream p{
+  background-color: rgba(70, 96, 137,.5);
+  border-radius: 15px;
+  padding: 5px 15px !important;
+  font-family: 'christmas'!important;
+  font-size: 30px !important;
+  color: black;
+  margin: 10px 30px 0 0 ;
+}
+
+.icon-sosmed{
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  width: 100vw;
+}
+
+.icon-sosmed a img{
+  width: 100px;
+  margin: 0 55px 0 0;
+  /* background-color: aquamarine; */
+  /* padding: 0; */
+
+}
+
+.prokes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: max-content;
+  flex-direction: column;
+  background: url("../asset/image/sampul2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-top: 100px ;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.prokes h2{
+  font-family: 'christ' !important;
+  font-size: 50px !important;
+  color: #466089;
+  font-weight: lighter;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.prokes .pro1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prokes .pro1 img{
+  width: 200px;
+  margin: 50px;
+}
+
+.prokes .pro2 img{
+  width: 500px;
+  /* margin: 50px; */
+}
+
+.hadiah{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.hadiah .ucapan-hadiah{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hadiah .ucapan-hadiah h1{
+  font-family: 'bromello';
+  font-size: 50px;
+}
+
+.hadiah .ucapan-hadiah h1,.hadiah .ucapan-hadiah p{
+  color: #466089;
+}
+
+.hadiah .ucapan-hadiah p{
+  padding: 50px 100px;
+  text-align: center;
+}
+
+.detail-hadiah{
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.hadiah .detail-hadiah img{
+  width: 30%;
+  margin: 20px;
+}
+
+.contact-us{
+  position: relative;
+  padding: 30px 250px 30px 250px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0px;
+}
+
+.box h2{
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'christmas';
+  letter-spacing: 5px;
+  font-weight: lighter;
+  color: #466089;
+}
+
+.box p{
+  color: #466089;
+  text-align: center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0 20px 10px 20px;
+}
+
+.box button{
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: #466089 1px solid ;
+  font-size: 20px;
+  font-family: 'Redressed', cursive;
+  margin-bottom: 20px;
+  cursor: pointer;
+  color: #466089;
+}
+
+.box button:hover{
+  background: #466089 ;
+  color: white;
+  transition: .5s;
+}
+
+.box .footer-content{
+  margin: 10px 0 0 0;
+  position: relative;
+}
+
+.thankyou h2{
+  margin-top: 100px;
+  font-size: 20px;
+  font-family: 'Mitr', sans-serif;
+  color: #466089;
+}
+
+.thankyou h5{
+  text-align: center;
+  font-family: 'amalfi';
+  color: #466089;
+  font-size: 30px !important;
+}
+
+.contact-us form input{
+  margin-bottom: 10px;
+}
+.contact-us form input, .contact-us form #message{
+  width: 100%;
+  height: 100px;
+  /* font-size: 1.0625rem; */
+  background: transparent;
+  /* padding-left: 10px; */
+  border: 1px solid #466089;
+  color: #466089;
+  font-family: 'Josefin Sans',sans-serif;
+}
+
+#name::-webkit-input-placeholder,
+#message::-webkit-input-placeholder{
+  color: #466089;
+}
+
+.contact-us form #message{
+  padding-top: 10px;
+}
+
+.contact-us form input:focus,
+.contact-us form #message:focus{
+  outline-color: #466089;
+}
+.contact-us form input{
+  height: 35px;
+}
+.contact-us form .btn{
+  margin-top: 10px;
+}
+
+#input_button{
+  height: 40px;
+  width: 100%;
+  border: 1px solid #466089;
+  background: transparent;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#input_button:hover{
+  background-color: #466089;
+  color:white;
+}
+
+#input_button:active{
+  transform: translateY(4px);
+}
+
+ .container1{
+  width:100%;
+  height:50vh;
+  display: block;
+  overflow: auto;
+  overflow-x: hidden;
+  background: rgba(70, 96, 137,.1);
+  /* padding-right: 10px; */
+}
+
+.task_container{
+  background-color:transparent;
+  width: 96% !important;
+  margin-bottom: 20px;
+}
+
+.task_container:hover{
+  background-color: #a8a8a8;
+}
+
+#task_data{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 5px;
+}
+
+#task_title{
+  font-family:monospace;
+  font-size:19px;
+  width:100%;
+  text-align: left;
+  padding: 0;
+  color: #466089;
+}
+
+
+#task_date{
+  text-align: left;
+  padding: 0;
+  font-family:monospace;
+  font-size:15px;
+  font-weight: bold;
+  padding-top: 5px;
+  color: #466089;
+}
+
+.footer{
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+  padding: 90px 0 60px 0;
+}
+
+.footer p{
+  color: #466089;
+}
+
+.footer a{
+  color: #466089;
+  text-decoration: none;
+}
+
+@media(max-width: 768px){
+  
+  #popup.active{
+      top: 0%;
+      visibility: visible;
+      opacity: 1;
+      transition: 1s;
+  }
+
+  .title{
+    padding-top: 100px;
+    text-align: center;  
+  }
+
+  .title a{
+      position: relative;
+      padding: 3px 25px;
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: black;
+      background: rgba(249, 211, 145, 0.55);
+      font-weight: lighter;
+      font-size: 18px;
+      border-radius: 20px;
+   }
+
+   .title h3{
+    font-size: 16px;
+  }
+  
+  .title h4{
+    font-size: 25px;
+  }
+
+  title a:hover{
+      background: rgb(238, 238, 238);
+  }
+
+  .content-isra img{
+    width: 80px;
+  }
+
+  .content-isra p{
+    padding: 20px 30px;
+  
+  }
+
+  .content-isra h3 b,
+  .content-isra p{
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .bride img,
+  .groom, img{
+    width: 250px;
+  }
+
+  .text-block1 p,
+  .text-block p{
+    font-size: 12px;
+  }
+
+  .playfair{
+    font-size: 20px !important;
+  }
+  
+  .salsa{
+    font-size: 18px !important;
+  }
+
+  .font-bromello{
+    font-size: 60px !important;
+  }
+
+  .count-down p{
+    font-size: 32px;
+  }
+
+  .separator{
+    padding: 0 12px;
+  }
+
+  .font-smaller{
+    font-size: 12px;
+  }
+
+  #habis.aktif{
+    font-size: 15px;
+  }
+  
+  .date{
+    margin-top: 10px;
+  }
+
+  .date .save-date p{
+    font-size: 32px !important;
+  }
+
+  .waktu .resepsi span,
+  .waktu .akad span{
+    font-size: 13px;
+  }
+
+  .waktu .resepsi p,
+  .waktu .akad p{
+    font-size: 10px !important;
+  }
+
+  .waktu .sabtu{
+    margin-top: 70px;
+  }
+
+  .waktu .sabtu p{
+    font-size: 20px !important;
+    line-height: 30px;
+  }
+
+  .kediaman{
+    padding: 20px 60px;
+    margin-top: 90px;
+  }
+
+  .kediaman p{
+    font-size: 13px !important;
+    line-height: 20px;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .date a{
+    font-size: 20px ;
+    border-radius: 15px;
+  }
+
+  .sorry p{
+    font-size: 13px !important;
+    line-height: 20px;
+    padding: 0 10px;
+  }
+
+  .sorry1 p{
+    font-size: 13px !important;
+    padding: 20px 10px 0 10px;
+    line-height: 20px;
+  }
+  
+  .live-stream p{
+    background-color: rgba(70, 96, 137,.5);
+    border-radius: 15px;
+    padding: 5px 15px !important;
+    font-family: 'christmas'!important;
+    font-size: 20px !important;
+    color: black;
+    margin: 10px 10px 0 0 ;
+  }
+  
+  .icon-sosmed a img{
+    width: 70px;
+    margin: 10px 28px 0 0;
+  }
+
+  .prokes{
+    margin-top: 10px ;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .prokes h2{
+    font-size: 35px !important;
+  }
+  
+  .prokes .pro1 img{
+    width: 100px;
+    margin: 30px;
+  }
+
+  .prokes .pro2 img{
+    width: 250px;
+    /* margin: 30px; */
+  }
+
+  .contact-us{
+    padding: 30px;
+  }
+
+  .box h2{
+      font-size: 30px;
+  }
+
+  .box p{
+      font-size: 12px;
+  }
+
+  .box button{
+      font-size: 15px;
+  }
+
+  .contact-us form input, .contact-us form #message{
+      width: 100%;
+  }
+
+  #name::-webkit-input-placeholder,
+  #message::-webkit-input-placeholder{
+      font-size: 13px;
+  }
+
+  .thankyou h2{
+      font-size: 15px;
+  }
+
+  .thankyou h5{
+      font-size: 40px;
+  }
+
+  body{
+      overflow-x: hidden;
+  }
+
+  #task_data{
+      padding-left: 10px;
+  }
+
+  #task_title{
+      font-size: 15px;
+  }
+
+  #task_date{
+      font-size: 14px;
+  }
+
+  .task_container:hover{
+    background-color: transparent;
+  }
+
+  .footer{
+      padding: 50px 0 40px 0;
+  }
+}
+
+@media(max-width: 576px){
+ 
+  #popup{
+    background: url("../asset/image/sampul.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  #popup.active{
+      top: 0%;
+      visibility: visible;
+      opacity: 1;
+      transition: 1s;
+  }
+
+  .title{
+    padding-top: 100px;
+    text-align: center;  
+  }
+
+  .title a{
+      position: relative;
+      padding: 3px 25px;
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: black;
+      background: rgba(249, 211, 145, 0.55);
+      font-weight: lighter;
+      font-size: 18px;
+      border-radius: 20px;
+   }
+
+   .title h3{
+    font-size: 16px;
+  }
+  
+  .title h4{
+    font-size: 25px;
+  }
+
+  title a:hover{
+      background: rgb(238, 238, 238);
+  }
+
+  #top{
+    background: url("../asset/image/sampul1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;    
+  }
+
+  .content-isra img{
+    width: 80px;
+  }
+
+  .content-isra p{
+    padding: 20px 30px;
+  
+  }
+
+  .content-isra h3 b,
+  .content-isra p{
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .bride img,
+  .groom, img{
+    width: 250px;
+  }
+
+  .text-block1 p,
+  .text-block p{
+    font-size: 12px;
+  }
+
+  .playfair{
+    font-size: 20px !important;
+  }
+  
+  .salsa{
+    font-size: 18px !important;
+  }
+
+  .font-bromello{
+    font-size: 60px !important;
+  }
+
+  .count-down p{
+    font-size: 32px;
+  }
+
+  .separator{
+    padding: 0 12px;
+  }
+
+  .font-smaller{
+    font-size: 12px;
+  }
+
+  #habis.aktif{
+    font-size: 15px;
+  }
+  
+  .date{
+    margin-top: 10px;
+  }
+
+  .date .save-date p{
+    font-size: 32px !important;
+  }
+
+  .waktu .resepsi span,
+  .waktu .akad span{
+    font-size: 20px;
+  }
+
+  .waktu .resepsi p,
+  .waktu .akad p{
+    font-size: 15px !important;
+  }
+
+  .waktu .sabtu p{
+    font-size: 25px !important;
+    line-height: 30px;
+    font-weight: bold bold;
+  }
+
+  .kediaman{
+    padding: 20px 60px;
+  }
+
+  .kediaman p{
+    font-size: 13px !important;
+    line-height: 20px;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .text-block2 a{
+    font-size: 20px ;
+    border-radius: 15px;
+  }
+
+  .sorry p{
+    font-size: 20px !important;
+    line-height: 20px;
+    padding: 0 10px;
+  }
+
+  .sorry1 p{
+    font-size: 18px !important;
+    padding: 20px 10px 20px 10px;
+    line-height: 20px;
+  }
+  
+  .live-stream p{
+    background-color: rgba(70, 96, 137,.5);
+    border-radius: 15px;
+    padding: 5px 15px !important;
+    font-family: 'christmas'!important;
+    font-size: 20px !important;
+    color: black;
+    margin: 10px 10px 0 0 ;
+  }
+  
+  .icon-sosmed a img{
+    width: 70px;
+    margin: 0px 28px 0 0;
+  }
+
+  .prokes{
+    margin-top: 10px ;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .prokes h2{
+    font-size: 35px !important;
+  }
+  
+  .prokes .pro1 img{
+    width: 100px;
+    margin: 30px;
+  }
+
+  .hadiah{
+    margin-top: 10px;
+  }
+
+  .hadiah .ucapan-hadiah h1{
+    font-family: 'bromello';
+    font-size: 30px;
+  }
+  
+  .hadiah .ucapan-hadiah p{
+    padding: 20px 10px;
+    text-align: center;
+  }
+  
+  .detail-hadiah{
+    flex-direction: column;
+  }
+  
+  .hadiah .detail-hadiah img{
+    width: 85%;
+    margin: 20px;
+  }
+
+  .contact-us{
+    padding: 30px;
+  }
+
+  .box h2{
+      font-size: 30px;
+  }
+
+  .box p{
+      font-size: 12px;
+  }
+
+  .box button{
+      font-size: 15px;
+  }
+
+  .contact-us form input, .contact-us form #message{
+      width: 100%;
+  }
+
+  #name::-webkit-input-placeholder,
+  #message::-webkit-input-placeholder{
+      font-size: 13px;
+  }
+
+  .thankyou h2{
+      font-size: 15px;
+  }
+
+  .thankyou h5{
+      font-size: 22px !important;
+  }
+
+  body{
+      overflow-x: hidden;
+  }
+
+  #task_data{
+      padding-left: 10px;
+  }
+
+  #task_title{
+      font-size: 15px;
+  }
+
+  #task_date{
+      font-size: 14px;
+  }
+
+  .task_container:hover{
+    background-color: transparent;
+  }
+
+  .footer{
+      padding: 50px 0 40px 0;
+  }
+
+}
