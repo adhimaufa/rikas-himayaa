@@ -449,6 +449,7 @@ img{
   font-size: 40px;
   color: #466089;
   font-weight: bolder;
+  z-index: 1;
 }
 
 .waktu .resepsi p,
@@ -935,6 +936,7 @@ img{
   .waktu .resepsi span,
   .waktu .akad span{
     font-size: 13px;
+    z-index: 1;
   }
 
   .waktu .resepsi p,
@@ -1190,6 +1192,7 @@ img{
   .waktu .resepsi span,
   .waktu .akad span{
     font-size: 20px;
+    z-index: 1;
   }
 
   .waktu .resepsi p,
